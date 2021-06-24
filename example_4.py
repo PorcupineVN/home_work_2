@@ -1,10 +1,9 @@
-import random
-n_products = 20
-prices=[round(random.uniform(0, 1000), 2) for i in range(n_products)]
+prices=[20.14, 199.07, 292.48, 10.05, 937.49, 158.90, 427.99, 1050.68, 528.41, 612.50, 739.88]
 print(prices)
 for price in prices:
-    r = int(price//1)
-    kk = int((price%1)*100)
+    price*=100
+    r = int(price //100)
+    kk = int(price%100)
     if kk < 10:
         kk = '0' + str(kk)
     print(f'{r} руб {kk} коп')
